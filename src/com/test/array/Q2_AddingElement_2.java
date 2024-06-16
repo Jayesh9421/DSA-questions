@@ -8,9 +8,9 @@ public class Q2_AddingElement_2 {
 
 		int a[] = {10,20,30,40};
 		
-		addArray(a, 2 , 100);
+		int[] addArray = addArray(a, 2 , 100);
 		
-		String string = Arrays.toString(a);
+		String string = Arrays.toString(addArray);
 		
 		System.out.println(string);
 		
@@ -18,16 +18,24 @@ public class Q2_AddingElement_2 {
 
 	public static int[] addArray(int arr[], int position , int element) {
 		
-		int temp[] = new int[arr.length+1];
+		int newArray[] = new int[arr.length+1];
 		
-		for (int i = arr.length-1; i > position-1 ; i--) {
-			
-			temp[i] = arr[i-1];
-			arr[i-1] =  element;
-		
+		for (int i = 0; i < position; i++) {
+			 newArray[i] = arr[i];
 		}
 		
-		return temp;
+		newArray[position] = element;
 		
+		for (int i = position; i < arr.length; i++) {
+			newArray[i+1] = arr[i];
+		}
+		
+		return newArray;
 	}
+	
+	
 }
+
+
+
+

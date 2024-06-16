@@ -20,14 +20,14 @@ public class Q22_MovingAllZerosToTheEnd_22 {
 		
 		for (int i = 0; i < arr.length; i++) {
 			if(arr[i] != 0) {
-				arr[nonZero] =  arr[i];
+				arr[nonZero] = arr[i];
 				nonZero++;
 			}
 		}
 		
 		for (int i = nonZero; i < arr.length; i++) {
-			arr[i] = 0;
+			arr[nonZero] = 0;
+			nonZero++;
 		}
-		
 	}
 }

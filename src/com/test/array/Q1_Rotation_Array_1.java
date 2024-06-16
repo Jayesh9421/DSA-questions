@@ -10,7 +10,7 @@ public class Q1_Rotation_Array_1 {
 		leftRotate(arr, 8, 2);
 		
 		for (int i : arr) {
-			System.out.println(arr);
+			System.out.print(i);
 		}
 
 	}
